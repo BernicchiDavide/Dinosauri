@@ -29,6 +29,9 @@ public class Tavolo {
     }
     
     private void addPlayer(int n){
+        mazzo.shaffle();
         players[n] = new Player(new Mazzo(mazzo.split()));
     }
+    
+    
 }

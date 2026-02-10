@@ -5,6 +5,7 @@
 package dinosauri;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  *
@@ -21,6 +22,10 @@ public class Mazzo {
     }    
     Mazzo(ArrayList<Carta> cc){
         carte = cc;
+    }
+    
+    void shuffle(){
+        Collection.shuffle(carte);
     }
     
     ArrayList<Carta> split(){
