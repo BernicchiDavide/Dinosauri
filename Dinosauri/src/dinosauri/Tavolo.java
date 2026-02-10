@@ -28,11 +28,7 @@ public class Tavolo {
         }
     }
     
-    private void addPlayer(int n) throws IOException{
-        players[n] = new Player(mazzo);
-    }
-
-    private Mazzo Mazzo(String[] readFile) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    private void addPlayer(int n){
+        players[n] = new Player(new Mazzo(mazzo.split()));
     }
 }

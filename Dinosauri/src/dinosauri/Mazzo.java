@@ -18,9 +18,18 @@ public class Mazzo {
         for (int i= 0; i<cc.length;i++){
             carte.add(new Carta(cc[i]));
         }
+    }    
+    Mazzo(ArrayList<Carta> cc){
+        carte = cc;
     }
     
     ArrayList<Carta> split(){
+        ArrayList<Carta> output = new ArrayList<Carta>();
+        for (int i = 0; i<carte.size(); i++){
+            output.add(carte.getLast());
+            carte.remove(carte.size());
+        }
+        return output;
     }
     
     
