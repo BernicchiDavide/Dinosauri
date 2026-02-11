@@ -15,6 +15,10 @@ public class Player {
         mazzo = m;
     }
     
+    public Carta giocaCarta(){
+        return mazzo.getCarta();
+    }
+    
     @Override
     public String toString(){
         return mazzo.toString();

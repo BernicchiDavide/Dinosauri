@@ -5,6 +5,7 @@
 package dinosauri;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,6 +15,8 @@ public class Tavolo {
     Mazzo mazzo;
     Player[] players = {null, null};
     FileManager fm;
+    
+    ArrayList<Carta> round = new ArrayList<Carta>();
     
     Tavolo(FileManager f){
         fm = f;
@@ -41,4 +44,24 @@ public class Tavolo {
     public String toString(){
         return players[0] + " vs " + players[1];
     } 
+    
+    public void iniziapartita(){
+        
+    }
+    
+    private void giocoCarte(){
+        players[0].giocaCarta();
+        players[1].giocaCarta();
+        round.add(players[0].giocaCarta());
+        round.add(players[1].giocaCarta());
+    }
+    
+    private Player getVincitore(Carta c1, Carta c2){
+        if (c1 == c2){
+            return null;
+        }
+        return null;
+    }
+    
+    
 }

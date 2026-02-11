@@ -43,6 +43,12 @@ public class Mazzo {
         }
         return output;
     }
+    
+    public Carta getCarta(){
+        Carta output = carte.getLast();
+        carte.removeLast();
+        return output;
+    }
     @Override
     public String toString(){
         String output="";

@@ -28,7 +28,7 @@ public class Dinosauri {
         table.addPlayer();
         table.addPlayer();
         
-        System.out.print(table);
+        
     }
     
 }
