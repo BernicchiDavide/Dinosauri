@@ -5,7 +5,7 @@
 package dinosauri;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 
 /**
  *
@@ -14,6 +14,8 @@ import java.util.Collection;
 public class Mazzo {
     
     ArrayList<Carta> carte = new ArrayList<Carta>();
+    int lunghezza = carte.size();
+    
     
     Mazzo(String[] cc){
         for (int i= 0; i<cc.length;i++){
@@ -25,17 +27,29 @@ public class Mazzo {
     }
     
     void shuffle(){
-        Collection.shuffle(carte);
+        Collections.shuffle(carte);
     }
     
-    ArrayList<Carta> split(){
+    ArrayList<Carta> dividi(){
         ArrayList<Carta> output = new ArrayList<Carta>();
-        for (int i = 0; i<carte.size(); i++){
-            output.add(carte.getLast());
-            carte.remove(carte.size());
+        if (carte.size() > 15){
+            for (int i = 0; i<carte.size(); i++){
+                output.add(carte.getLast());
+                carte.remove(carte.size()-1);
+            }
+        }
+        else {
+            output = carte;
         }
         return output;
     }
-    
+    @Override
+    public String toString(){
+        String output="";
+        for (int i = 0; i<carte.size(); i++){
+            output += carte.get(i) + "\n";
+        }
+        return "carte: \n" + output;
+    }
     
 }

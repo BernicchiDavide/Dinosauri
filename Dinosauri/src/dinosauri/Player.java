@@ -14,4 +14,9 @@ public class Player {
     Player(Mazzo m){
         mazzo = m;
     }
+    
+    @Override
+    public String toString(){
+        return mazzo.toString();
+    }
 }

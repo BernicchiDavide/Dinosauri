@@ -28,10 +28,17 @@ public class Tavolo {
         }
     }
     
-    private void addPlayer(int n){
-        mazzo.shaffle();
-        players[n] = new Player(new Mazzo(mazzo.split()));
+    void fillMazzo() throws IOException{
+        mazzo = new Mazzo(fm.readFile());
     }
     
+    private void addPlayer(int n){
+        mazzo.shuffle();
+        players[n] = new Player(new Mazzo(mazzo.dividi()));
+    }
     
+    @Override
+    public String toString(){
+        return players[0] + " vs " + players[1];
+    } 
 }
