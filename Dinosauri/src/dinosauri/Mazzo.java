@@ -14,7 +14,6 @@ import java.util.Collections;
 public class Mazzo {
     
     ArrayList<Carta> carte = new ArrayList<Carta>();
-    int lunghezza = carte.size();
     
     
     Mazzo(String[] cc){
@@ -24,6 +23,27 @@ public class Mazzo {
     }    
     Mazzo(ArrayList<Carta> cc){
         carte = cc;
+    }    
+    Mazzo(){
+        
+    }
+    
+    public int getLungezza(){
+        return carte.size();
+    }
+    
+    public ArrayList<Carta> getCarte(){
+        return carte;
+    }
+    
+    public void clear(){
+        for(Carta c: carte){
+            carte.removeLast();
+        }
+    }
+    
+    public void addCarta(Carta carta){
+        carte.add(carta);
     }
     
     void shuffle(){
@@ -44,11 +64,12 @@ public class Mazzo {
         return output;
     }
     
-    public Carta getCarta(){
+    public Carta giocaCarta(){
         Carta output = carte.getLast();
         carte.removeLast();
         return output;
     }
+    
     @Override
     public String toString(){
         String output="";

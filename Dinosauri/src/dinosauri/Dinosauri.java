@@ -27,6 +27,8 @@ public class Dinosauri {
         table.fillMazzo();
         table.addPlayer();
         table.addPlayer();
+        //System.out.print(table);
+        table.iniziapartita();
         
         
     }
