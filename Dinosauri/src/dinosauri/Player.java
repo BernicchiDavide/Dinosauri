@@ -11,10 +11,11 @@ package dinosauri;
 public class Player {
     Mazzo mazzo;
     Mazzo punti = new Mazzo();
-    String nome = "giocatore 1";
+    String nome = "giocatore";
     
-    Player(Mazzo m){
+    Player(Mazzo m, String n){
         mazzo = m;
+        nome = n;
     }
     
     public String getNome(){

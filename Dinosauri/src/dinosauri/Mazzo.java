@@ -65,8 +65,8 @@ public class Mazzo {
     }
     
     public Carta giocaCarta(){
-        Carta output = carte.getLast();
-        carte.removeLast();
+        Carta output = carte.getLast(); //non funziona solo quando si fa partire a velocità normale
+        carte.removeLast();             //se si fa il debug funziona sempre
         return output;
     }
     
