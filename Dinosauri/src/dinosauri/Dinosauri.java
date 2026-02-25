@@ -17,20 +17,6 @@ public class Dinosauri {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
-        
-        String file= "mazzo.txt";
-        FileManager fm = new FileManager(file);
-        Tavolo table = new Tavolo(fm);
-        
-        
-        table.fillMazzo();
-        table.addPlayer();
-        table.addPlayer();
-        //System.out.print(table);
-        table.iniziapartita();
-        
-        
-    }
+
     
 }
